@@ -56,57 +56,6 @@ project_info_label.pack()
 ```
 Each button is linked to a function that opens the corresponding calculator window.
 
-### Circle Calculator
-Calculates circle dimensions based on input:
-```python
-def calculate(*args):
-    try:
-        # Perform calculations based on provided input
-        ...
-    except ValueError:
-        messagebox.showerror("خطأ", "الرجاء إدخال قيمة صحيحة")
-```
-
-### Central Angle Calculator
-Determines the central angle given other angle measures:
-```python
-def show_angle_input():
-    try:
-        num_angles = int(num_angles_entry.get())
-        ...
-        def calculate_central_angle():
-            try:
-                angles_sum = sum(float(angle_entry.get()) for angle_entry in angle_inputs)
-                central_angle = 360 - angles_sum
-                ...
-```
-
-### Arc Length Calculator
-Calculates the length of an arc:
-```python
-def calculate_arc_length():
-    try:
-        x = float(entry_x.get())
-        r = float(entry_r.get())
-        arc_length = (x / 360) * (2 * r * 3.14)
-        result_label.config(text=f"Arc Length: {arc_length:.2f}")
-    except ValueError:
-        messagebox.showerror("خطأ", "الرجاء إدخال قيم صحيحة لـ x و r")
-```
-
-### Relationship Between Central and Inscribed Angles
-Explains the relationship between an inscribed angle and its corresponding arc:
-```python
-def update_from_angle(event):
-    try:
-        angle = float(entry_angle.get())
-        circumference = angle / 2
-        entry_circumference.delete(0, tk.END)
-        entry_circumference.insert(0, str(circumference))
-    except ValueError:
-        entry_circumference.delete(0, tk.END)
-```
-
 ## License
 This project is for educational purposes and is presented to Riyadh Schools and its affiliates.
 
